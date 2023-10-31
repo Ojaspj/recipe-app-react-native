@@ -5,40 +5,41 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
+import Animated, { FadeInDown } from 'react-native-reanimated';
 
-export default function Categories({ activeCategory, setactiveCategory }) {
+
+export default function Categories({categories,  activeCategory, handleChangeCategory }) {
   return (
-    <View>
+    <Animated.View entering={FadeInDown.duration(500).springify()}>
       <ScrollView
         horizontal
         showsHorizontalScrollIndicator={false}
         className="space-x-4"
         contentContainerStyle={{ paddingHorizontal: 15 }}
       >
-        {categoryData.map((cat, index) => {
+        {categories.map((cat, index) => {
+          let isActive = cat.strCategory == activeCategory;
+          let activeButtonClass = isActive ? 'bg-amber-400' : 'bg-black/20';
           return (
             <TouchableOpacity
               key={index}
-              // onPress={() => setactiveCategory(cat.name)}
+              onPress={() => handleChangeCategory(cat.strCategory)}
               className="flex items-center space-y-1"
             >
-                <View className="mb-8">
-                    <Text
-                        className={`text-sm font-semibold ${
-                        activeCategory === cat.name ? "text-amber-400" : "text-gray-600"
-                        }`}
-                    >
-                        {cat.name}
-                    </Text>
-                </View>
+              <View className={"rounded-full p-[6px] "+activeButtonClass}>
                 <Image
-                  source={{ uri: cat.image }}
+                  source={{ uri: cat.strCategoryThumb }}
+                  className="rounded-full"
                   style={{ width: hp(6), height: hp(6) }}
                 />
+              </View>
+              <View>
+                <Text>{cat.strCategory}</Text>
+              </View>
             </TouchableOpacity>
           );
         })}
       </ScrollView>
-    </View>
+    </Animated.View>
   );
 }
