@@ -27,6 +27,8 @@ export default function HomeScreen() {
     setMeals([]);
   }
 
+  
+
   const getCategories = async () => {
     try {
       const response = await axios.get(
