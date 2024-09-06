@@ -25,6 +25,18 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6c169ab9-200b-49fa-a2ff-ea7eec32da7f"
+      }
+    },
+    "owner": "prajwal7",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/6c169ab9-200b-49fa-a2ff-ea7eec32da7f"
     }
   }
 }
