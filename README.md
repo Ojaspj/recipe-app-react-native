@@ -15,4 +15,8 @@ React Native <br/>
 React Native Animated API <br/>
 
 ## Screenshots
+
+<img src="/assets/images/1.png">
+<img src="/assets/images/2.png">
+<img src="/assets/images/3.png">
   
