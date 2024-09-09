@@ -16,9 +16,9 @@ React Native Animated API <br/>
 
 ## Screenshots
 <div style="display: flex; flex-wrap: wrap;">
-  <img src="/assets/images/1.png" style="height:900px;">
-  <img src="/assets/images/2.png" style="height:900px;">
-  <img src="/assets/images/3.png" style="height:900px;">
+  <img src="/assets/images/1.png" style="height:700px;">
+  <img src="/assets/images/2.png" style="height:700px;">
+  <img src="/assets/images/3.png" style="height:700px;">
 </div>
 
   
